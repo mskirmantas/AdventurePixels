@@ -4,17 +4,32 @@ $primary-color: rgb(79, 84, 95);
 $secondary-color: #fff;
 $footer-text-color: rgb(122, 130, 143);
 $header-color: rgba(64, 68, 78, 0.75);
-$section-color: rgb(230, 230, 230);
+$section-color: rgb(218, 218, 218);
 
-@font-face{
-	src: url(../fonts/Segoe\UI.ttf);
-	font-family: Segoe UI;
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('SegoeUI.eot');
+    src: url('SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('SegoeUI.woff2') format('woff2'),
+        url('SegoeUI.woff') format('woff'),
+        url('SegoeUI.ttf') format('truetype'),
+        url('SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@font-face{
-	src: url(../fonts/Helvetica-Bold.ttf);
-	font-family: Helvetica-Bold;
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-Bold.eot');
+    src: url('Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Helvetica-Bold.woff2') format('woff2'),
+        url('Helvetica-Bold.woff') format('woff'),
+        url('Helvetica-Bold.ttf') format('truetype'),
+        url('Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
 }
+
 
 *,
 *::before,
@@ -334,8 +349,8 @@ nav{
 		text-decoration: none;
 	}
 	i{
-		margin: 15px 10px;
-		padding: 10px 11px 10px;
+		margin: 15px 3px;
+		padding: 5px 7px 4px;
 		color: $primary-color;
 		border: 1.5px solid $primary-color;
 		&:hover {
@@ -371,7 +386,7 @@ nav{
 	p {
 		margin: 0;
 		font-size: 1.2rem;
-		line-height: 2.815rem;
+		line-height: 2.815;
 	}	
 }
 
@@ -412,8 +427,8 @@ nav{
 }
 .contact-info { 
 	margin: 0;
-	line-height: 1.35rem;
-	padding-top: 35px;
+	line-height: 1.35;
+	padding-top: 30px;
 	padding-bottom: 30px;
 	p {
 		margin: 0;
@@ -423,8 +438,14 @@ nav{
 .cf-element{ 
 	padding-top: 15px;
 	padding-bottom: 15px;
-	h5{
-		padding-bottom: 10px;
+	label{
+		font-family: sans-serif;
+		font-weight: normal;
+		margin: 0;
+		font-size: 0.785rem;
+		line-height: 1.1;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
 	}
 }
 .form-control {	
@@ -432,12 +453,12 @@ nav{
 	color: $secondary-color;
 	padding: 10px;
 	font-size: 0.785rem;
-	line-height: 1.35rem;	
+	line-height: 1.35;	
 }
 .message {	
 	width: 100%;
 	font-size: 0.785rem;
-	line-height: 1.35rem;
+	line-height: 1.35;
 	font-family: "Segoe UI", "Arial", sans-serif;
 	background: transparent;
 }
@@ -447,7 +468,7 @@ nav{
 	background-color: $feature-color;
 	color: $secondary-color;
 	font-size: 0.785rem;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.1em;
 	font-weight: bold;
 	font-family: "Segoe UI", "Arial", sans-serif;
 	text-transform: uppercase;
@@ -659,6 +680,11 @@ footer {
 	.contact-info { 
 		padding-top: 15px;
 		padding-bottom: 15px;
+		text-align: center;
+	}
+	.contact-form .flex-container{
+		flex-direction: column-reverse;
+
 	}
     .cf-column{
 		width: 100%;
